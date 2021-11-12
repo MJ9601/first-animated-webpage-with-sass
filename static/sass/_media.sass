@@ -1,0 +1,66 @@
+@media (max-width:950px) 
+  .navbar
+    .nav-container
+      position: relative
+      .navbar-items
+        position: absolute
+        top: -100vh
+        opacity: 0
+        left: 0
+        width: 100%
+        height: 70vh
+        padding: 2rem 0
+        align-items: start
+        justify-content: start
+        border-radius: .4rem
+        background-color: lighten($gray,50% )
+        +customeTransition(all .4s linear)
+        .navbar-list
+          width: 100%
+          padding: 1rem
+          margin: auto 0
+          .navbar-item
+            display: block
+            margin-bottom: 1rem
+            padding: 1rem
+            border-radius: .2rem
+            background-color: $light
+            &:hover
+                background-color: $greenBlue
+                .navbar-link
+                  color: $activeBlue
+            .navbar-link
+              width: 100%
+              &::before
+                content: ""
+                border-bottom: none
+        &.active
+          top: 15vh
+          opacity: 1
+              
+      .collapse-icon
+        display: block
+
+  .about-img
+    display: none
+
+  .content-wrapper
+    .about-content
+      .lead
+        width: 80vw
+    
+
+
+@media (max-width:500px) 
+  #facility
+    padding: 0
+    .content-wrapper
+      padding: 0 !important
+      margin: 0
+      .img-content
+        padding: 0
+        margin: 0
+        .img-wrapper
+          width: 30rem
+          height: 19rem
+          margin: .5rem auto

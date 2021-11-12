@@ -7,4 +7,71 @@ nav
 
 span
   color: $lightenGreenBlue
-  
+
+
+section
+  width: 100%
+  padding: 1rem
+  background-color: $light
+
+.btn-general
+  margin: 2rem 0
+  padding: .5rem 2.5rem
+  border: none
+  border-radius: .3rem
+  color: $light
+  background-color: $dark
+  font-size: 2rem
+  text-align: center
+  align-items: center
+  text-transform: capitalize !important
+  font-weight: bold
+  position: relative
+  overflow: hidden
+  +customeTransition(all .3s ease)
+  &::before
+    content: ""
+    position: absolute
+    top: -100%
+    right: 0
+    width: 100%
+    background-color: $lightenGreenBlue
+    height: 100%
+    border-radius: .3rem
+    +customeTransition(all .3s ease)
+  &:hover
+    color: $dark
+    z-index: 1
+    &::before
+      top: 0
+      z-index: -1
+
+
+
+
+.popUpContainer
+  display: none
+  opacity: 0
+  z-index: 10001
+  position: fixed
+  top: 0
+  right: 0
+  height: 100vh
+  overflow: hidden
+  width: 100%
+  background-color: $dark
+  scroll-behavior: none
+  &.active
+    display: block
+    opacity: 1
+  .fa-times
+    cursor: pointer
+    &:hover
+      color: darken(red, 10%) !important
+  .img-popUp
+    border-radius: .4rem
+    height: 75vh
+    width: 75vw
+    object-fit: contain
+      
+
