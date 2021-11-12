@@ -1,0 +1,63 @@
+
+// navbar section
+
+.navbar
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  right: 0
+  height: inherit
+  .nav-container
+    width: 85%
+    margin: auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .brand-text
+      font-size: 3rem
+      padding: 0 .5rem 0 0
+      font-weight: 500
+
+    .navbar-items
+      .navbar-list
+        .navbar-item 
+          display: inline
+          margin: 0 1rem
+          font-size: 2rem
+          .navbar-link
+            text-transform: capitalize !important
+            color: $darkGray
+            font-weight: 500
+            position: relative
+            +customeTransition(all .4s ease)
+            &::before
+              content: ""
+              position: absolute
+              top: 0
+              right: 0
+              left: 0
+              width: 100%
+              border-bottom: .2rem solid $lightenGreenBlue
+              height: 100%
+              transform: scaleX(.2)
+              +customeTransition(all .4s ease)
+            &:hover
+              color: $lightenGreenBlue
+              &::before
+                transform: scaleX(1)
+    .collapse-icon
+      font-size: 2.5rem
+      display: none
+      &:hover
+        color: $lightenGreenBlue
+        transform: rotate(-90deg)
+        +customeTransition(all .4s ease-in-out)
+
+
+
+
+
+
