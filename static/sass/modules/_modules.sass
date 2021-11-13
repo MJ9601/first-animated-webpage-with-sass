@@ -115,6 +115,20 @@
     height: 75vh
     width: 75vw
     object-fit: contain
+  .col
+    &.control-icons
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    .fas
+      font-size: 3rem
+      color: $light
+      cursor: pointer
+      &:hover
+        color: $lightenGreenBlue
+      &.deactived
+        color: $darkGray
 
   
 .btn-general
@@ -148,8 +162,66 @@
     &::before
       top: 0
       z-index: -1
-    
 
+
+.content-card
+  padding: 0
+  padding-top: 0
+  padding-bottom: 0
+  margin: .5rem
+  background-color: #fff
+  color: $dark
+  display: flex
+  flex-direction: column
+  align-items: start
+  width: 35rem
+  +customeBoxShadow(.2rem .2rem .8rem $dark)
+  border-radius: .4rem
+  .img-content
+    width: 100%
+    height: inherit
+    object-fit: cover
+    border-top-left-radius: .4rem
+    border-top-right-radius: .4rem
+    margin-bottom: 0
+  .content-body
+    padding: 0 2rem
+    .date
+      padding-top: 1rem
+      color: $darkGray
+    .content-title
+      color: $dark
+      margin-top: 2rem
+      padding: 1rem 0
+      padding-bottom: 0
+    .content-text
+      color: $gray
+      font-size: 1.8rem
+
+    
+.map-wrapper
+  display: flex
+  flex-direction: column
+  justify-content: end
+  align-items: end
+  position: relative
+  .map  
+    width: 35rem
+    height: 40rem
+    position: relative
+    padding: .2rem
+    border-radius: .5rem
+    border-top: 1rem solid $lightenGreenBlue
+    border-left: 1rem solid $lightenGreenBlue
+    #map
+      height: 100%
+      width: 100%
+      border-radius: .4rem
+      transform: translate(.7rem, .7rem)
+      
+
+    
+    
 
     
 
