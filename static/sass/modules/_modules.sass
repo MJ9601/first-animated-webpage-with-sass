@@ -88,73 +88,66 @@
 
 // about section
 
-.content-wrapper
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  align-items: center
-  .about-content
-    // width: 40vw
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    h1
-      font-size: 3rem
-      font-weight: bold
-      margin: .5rem 0
-    .lead
-      width: 50vw
-      font-size: 2rem
-      font-weight: 300
-      color: $gray
-
-  img
-    width: 32vw
-    height: 80vh
-    object-fit: contain
-
-
-#facility
-  position: relative
-  padding: 2rem
-  .content-wrapper
-    padding: 0 2rem
-    min-height: 100vh
-    display: flex
-    flex-flow: column
-    justify-content: center
-    align-items: center
-    h1
-      font-size: 3rem
-      margin: 0rem auto 3rem auto
-    .img-content
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      margin: auto
-      justify-content: space-evenly
-      .img-wrapper
-        width: 45rem
-        height: 25rem
-        overflow: hidden
-        border-radius: .4rem
-        margin: .5rem
-        img
-          width: 100%
-          height: 100%
-          object-fit: cover
-          +customeTransition(all .4s ease)
-          border-radius: .4rem
-          cursor: pointer
-          &:hover
-            transform: scale(1.2)
 
       
 
+.popUpContainer
+  display: none
+  opacity: 0
+  z-index: 10001
+  position: fixed
+  top: 0
+  right: 0
+  height: 100vh
+  overflow: hidden
+  width: 100%
+  background-color: $dark
+  scroll-behavior: none
+  &.active
+    display: block
+    opacity: 1
+  .fa-times
+    cursor: pointer
+    &:hover
+      color: darken(red, 10%) !important
+  .img-popUp
+    border-radius: .4rem
+    height: 75vh
+    width: 75vw
+    object-fit: contain
 
   
-
+.btn-general
+  margin: 2rem 0
+  padding: .5rem 2.5rem
+  border: none
+  border-radius: .3rem
+  color: $light
+  background-color: $lightenGreenBlue
+  font-size: 2rem
+  text-align: center
+  align-items: center
+  text-transform: capitalize !important
+  font-weight: bold
+  position: relative
+  overflow: hidden
+  +customeTransition(all .3s ease)
+  &::before
+    content: ""
+    position: absolute
+    top: -100%
+    right: 0
+    width: 100%
+    background-color: $dark
+    height: 100%
+    border-radius: .3rem
+    +customeTransition(all .3s ease)
+  &:hover
+    color: $lightenGreenBlue
+    z-index: 1
+    &::before
+      top: 0
+      z-index: -1
     
 
 
